@@ -2,11 +2,10 @@
 
 > Provides hashing algorithms through a web worker
 
-[![apm](https://flat.badgen.net/apm/license/service-hash)](https://atom.io/packages/service-hash)
-[![apm](https://flat.badgen.net/apm/v/service-hash)](https://atom.io/packages/service-hash)
-[![apm](https://flat.badgen.net/apm/dl/service-hash)](https://atom.io/packages/service-hash)
-[![CircleCI](https://flat.badgen.net/circleci/github/idleberg/atom-service-hash)](https://circleci.com/gh/idleberg/atom-service-hash)
-[![David](https://flat.badgen.net/david/dep/idleberg/atom-service-hash)](https://david-dm.org/idleberg/atom-service-hash)
+[![License](https://img.shields.io/github/license/idleberg/atom-service-hash?color=blue&style=for-the-badge)](https://github.com/idleberg/atom-service-hash/blob/master/LICENSE)
+[![Release](https://img.shields.io/github/v/release/idleberg/atom-service-hash?style=for-the-badge)](https://github.com/idleberg/atom-service-hash/releases)
+[![Downloads](https://img.shields.io/pulsar/dt/service-hash?style=for-the-badge&color=slateblue)](https://web.pulsar-edit.dev/packages/service-hash)
+[![CI](https://img.shields.io/github/actions/workflow/status/idleberg/atom-service-hash/default.yml?style=for-the-badge)](https://github.com/idleberg/atom-service-hash/actions)
 
 ## Installation
 
