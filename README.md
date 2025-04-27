@@ -9,11 +9,14 @@
 
 ## Installation
 
-### apm
 
-Install `service-hash` from Atom [install view](atom://settings-view/show-package?package=service-hash) or use the command-line equivalent:
+### Package Manager
 
-`$ apm install service-hash`
+Install `service-fetch` from the editor's [Package Manager](http://flight-manual.pulsar-editor.cc/using-atom/sections/atom-packages/) or the command-line equivalent:
+
+```sh
+$ ppm install service-fetch
+```
 
 ### Using Git
 
@@ -23,18 +26,18 @@ Change to your Atom packages directory:
 
 ```powershell
 # Powershell
-$ cd $Env:USERPROFILE\.atom\packages
+$ cd $Env:USERPROFILE\.pulsar\packages
 ```
 
 ```cmd
 :: Command Prompt
-$ cd %USERPROFILE%\.atom\packages
+$ cd %USERPROFILE%\.pulsar\packages
 ```
 
 **Linux & macOS**
 
 ```bash
-$ cd ~/.atom/packages/
+$ cd ~/.pulsar/packages/
 ```
 
 Clone the repository as `service-hash`:
