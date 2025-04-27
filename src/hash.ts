@@ -1,4 +1,5 @@
 import { resolve } from 'path';
+import { v4 as UUIDv4 } from 'uuid';
 import Logger from './log';
 
 const worker = new Worker(resolve(__dirname, 'hash.worker.js'));
@@ -39,20 +40,27 @@ const supportedAlgorithms = {
 function hash(contents: string | Buffer | Uint8Array | Uint16Array | Uint32Array, algorithm: string | string[] = 'sha1'): Promise<string> {
   const algorithms = Array.isArray(algorithm) ? algorithm : [algorithm];
 
-  const prettyAlgorithms = algorithms.map(algorithm => {
-    if (!Object.keys(supportedAlgorithms).includes(algorithm)) {
-      throw Error(`Unsupported algorithm '${algorithm}'`);
-    }
+  const prettyAlgorithms = algorithms
+    .map((algorithm) => {
+      if (!Object.keys(supportedAlgorithms).includes(algorithm)) {
+        throw Error(`Unsupported algorithm '${algorithm}'`);
+      }
 
-     return supportedAlgorithms[algorithm]
-  }).join(', ');
+      return supportedAlgorithms[algorithm];
+    })
+    .join(', ');
 
   return new Promise((resolve) => {
-    Logger.log(`Requesting ${prettyAlgorithms}:`, contents);
-    worker.postMessage({ contents, algorithms });
+    const senderID = UUIDv4();
+    const shortID = senderID.substr(0, 8);
+
+    Logger.log(`${shortID} Requesting ${prettyAlgorithms}:`, contents);
+    worker.postMessage({ contents, algorithms, senderID });
 
     worker.onmessage = (e: MessageEvent) => {
-      Logger.log(`Receiving ${prettyAlgorithms}:`, e.data);
+      if (senderID !== e.data.recipientID) return;
+
+      Logger.log(`${shortID} Receiving ${prettyAlgorithms}:`, e.data);
 
       resolve(e.data);
     };

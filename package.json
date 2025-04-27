@@ -54,7 +54,6 @@
       }
     }
   },
-  "dependencies": {},
   "devDependencies": {
     "@atxm/developer-console": "^0.5.0",
     "@types/atom": "^1.40.5",
@@ -74,7 +73,8 @@
     "prettier": "^2.2.1",
     "source-map-explorer": "^2.5.1",
     "tslib": "^2.0.3",
-    "typescript": "^4.1.3"
+    "typescript": "^4.1.3",
+    "uuid": "^8.3.2"
   },
   "remarkConfig": {
     "plugins": [
