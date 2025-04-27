@@ -12,10 +12,10 @@
 
 ### Package Manager
 
-Install `service-fetch` from the editor's [Package Manager](http://flight-manual.pulsar-editor.cc/using-atom/sections/atom-packages/) or the command-line equivalent:
+Install `service-hash` from the editor's [Package Manager](http://flight-manual.pulsar-editor.cc/using-atom/sections/atom-packages/) or the command-line equivalent:
 
 ```sh
-$ ppm install service-fetch
+$ ppm install service-hash
 ```
 
 ### Using Git
