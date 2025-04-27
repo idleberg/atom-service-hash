@@ -9,7 +9,6 @@
 
 ## Installation
 
-
 ### Package Manager
 
 Install `service-hash` from the editor's [Package Manager](http://flight-manual.pulsar-editor.cc/using-atom/sections/atom-packages/) or the command-line equivalent:
